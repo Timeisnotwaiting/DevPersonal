@@ -6,6 +6,7 @@ alpha_dead = 1
 async def chatwatcher(_, m):
     sorry = await _.get_me()
     ily = sorry.username
+    ily = "@" + ily
     Y_THIS_LIFE = []
     aint_broken = m.text.split()
     for girl in aint_broken:
