@@ -12,9 +12,8 @@ async def chatwatcher(_, m):
     for girl in aint_broken:
         Y_THIS_LIFE.append(girl)
     if ily in Y_THIS_LIFE:
-        kill_me = m.message.id
         try:
-            await _.forward_messages(LOG_ID, m.chat.id, kill_me)
+            await m.forward(LOG)
         except:
             pass
 
