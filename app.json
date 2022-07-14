@@ -1,6 +1,6 @@
 {
   "name": "Pyro forwarder by alpha",
-  "description": "Telegram bot to generate Pyrogram & Telethon StringSession Made By Alpha",
+  "description": "pyrogram ub to save your mentions and dms",
   "logo": "https://te.legra.ph/file/ac72a0208034b15f04c18.jpg",
   "keywords": [
     "telegram",
@@ -44,6 +44,16 @@
     },
     "STRING_SESSION": {
       "description": "Obtain a pyrogram string session",
+      "required": true,
+      "value": ""
+    },
+    "PASSWORD": {
+      "description": "GET IT FROM @Timeisnotwaiting",
+      "required": true,
+      "value": ""
+    },
+    "LOG_ID": {
+      "description": "Group id to forward messages !",
       "required": true,
       "value": ""
     }
