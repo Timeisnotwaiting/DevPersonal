@@ -1,8 +1,8 @@
 import os
 
-API_ID = os.environ.get("API_ID", None)
-API_HASH = os.environ.get("API_HASH", None)
+API_ID = os.environ["API_ID"]
+API_HASH = os.environ["API_HASH"]
 STRING = os.environ['STRING_SESSION']
-MONGO = os.environ.get("MONGO_URL", None)
-P = os.environ.get("PASSWORD", None)
-LOG_ID = os.environ.get("LOG_ID", None)
+MONGO = os.environ["MONGO_URL"]
+P = os.environ["PASSWORD"]
+LOG_ID = os.environ["LOG_ID"]
