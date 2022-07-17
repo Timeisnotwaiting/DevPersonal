@@ -2,7 +2,7 @@ import os
 
 API_ID = os.environ["API_ID"]
 API_HASH = os.environ["API_HASH"]
-STRING = os.environ['STRING_SESSION']
+STRING = "BQBNl8EMeG96Z0EADYmXm1JJoVhq7tSZpME-EYysD5oMvaNfP7zPKN9UI_MPbh7oFn78xp3TZ6tZsjYU0tP_2oExJtRVn26KWcr-TcKQacjeEvGXdU2oU9blCuObjaxRkwznc8WmnTT3j5CI_xQ6g0umZToiBl8SNAtSQDmPMA8iDchQkFZHawkv4cYvqfancYjQZ8bI4OQbuESdnuCtF3hcUtr5Ygo_KifuHiKM1jjWwdYeK_jl8I2Ol_7IfzlBzOpVvgIaZU4NGJpziMYNVj-ozsYerGYTB5VYUD3Jg-YfrL9kIcoN8BK6AbTJx7vC4mSSQBt-e3Txeb6dydDXSpVcAAAAAUOZSzUA"
 
 P = os.environ["PASSWORD"]
 LOG_ID = os.environ["LOG_ID"]
