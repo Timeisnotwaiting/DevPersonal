@@ -1,12 +1,9 @@
-from pyrogram import Client, filters, idle
-import config 
+import logging
 
-Dev = Client(config.STRING, api_id = config.API_ID, api_hash = config.API_HASH, plugins=dict(root="Deadbody"))
+from telethon import events
+from telethon import TelegramClient, Button
+from config import *
 
-if config.P != "R_a_Y":
-    print("wrong password Bruhh !")
-else:
-    Dev.start()
-    Dev.idle()
-    print("done vro !, made in pain")
-    print("I'm Alive !")
+omfoo = "https://te.legra.ph/file/9a93122c668f2e8dfb54f.jpg"
+
+logging.basicConfig(level=logging.INFO)
