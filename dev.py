@@ -30,5 +30,5 @@ async def smexy(event):
             name = get_display_name(entity)
             hehe = nayantara(name, event.sender_id)
             lm = f"#PM\n\n{hehe}\n\n{event.message}"
-            await event.client.send_message(LOG, lm)
+            await event.client.send_message(LOG_ID, lm)
         
