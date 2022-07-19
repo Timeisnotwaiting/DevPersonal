@@ -25,10 +25,13 @@ async def _(event):
 @DEV.on(event.NewMessage(incoming=True))
 async def smexy(event):
     if event.is_private:
-        if event.message.text:
-            entity = await DEV.get_entity(event.sender_id)
-            name = get_display_name(entity)
-            hehe = nayantara(name, event.sender_id)
-            lm = f"#PM\n\n{hehe}\n\n{event.message}"
-            await event.client.send_message(LOG_ID, lm)
+        if event.message:
+            await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
+    else:
+        xD = event.text.split()
+        if not USERNAME[0] == "@":
+            USERNAME = "@" + USERNAME
+        if USERNAME in xD:
+            await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
+            
         
