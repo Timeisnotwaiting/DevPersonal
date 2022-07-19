@@ -28,7 +28,7 @@ async def smexy(event):
             return await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
             
 
-if PASSWORD == "YashuAlpha":
+if P == "YashuAlpha":
     print("verifying password !")
     DEV.run_until_disconnected()
     print("password verified ✅, 🎉 End Forwarder started !")
