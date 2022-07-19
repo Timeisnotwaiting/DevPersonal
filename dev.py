@@ -6,6 +6,9 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient, Button
 from config import *
 
+def nayantara(name, userid):
+    return f"[{name}](tg://user?id={userid})"
+
 omfoo = "https://te.legra.ph/file/9a93122c668f2e8dfb54f.jpg"
 
 logging.basicConfig(level=logging.INFO)
@@ -22,8 +25,10 @@ async def _(event):
 @DEV.on(event.NewMessage(incoming=True))
 async def smexy(event):
     if event.is_private:
-        if event.message.text or event.message.sticker:
+        if event.message.text:
             entity = await DEV.get_entity(event.sender_id)
             name = get_display_name(entity)
-            await event.client.send_message(LOG, event.message)
+            hehe = nayantara(name, event.sender_id)
+            lm = f"#PM\n\n{hehe}\n\n{event.message}"
+            await event.client.send_message(LOG, lm)
         
