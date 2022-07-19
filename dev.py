@@ -1,6 +1,7 @@
 import logging
 import asyncio
 from telethon import events
+from telethon.utils import get_display_name
 from telethon.sessions import StringSession
 from telethon import TelegramClient, Button
 from config import *
@@ -16,4 +17,13 @@ async def _(event):
     on()
     await event.edit("Message forwarding process is starting")
     await asyncio.sleep(2)
-    await event.edit("
+    await event.edit("Process started, check log group")
+
+@DEV.on(event.NewMessage(incoming=True))
+async def smexy(event):
+    if event.is_private:
+        if event.message.text or event.message.sticker:
+            entity = await DEV.get_entity(event.sender_id)
+            name = get_display_name(entity)
+            await event.client.send_message(LOG, event.message)
+        
