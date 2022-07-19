@@ -1,6 +1,6 @@
 {
-  "name": "Pyro forwarder by alpha",
-  "description": "pyrogram ub to save your mentions and dms",
+  "name": "Tele forwarder by alpha",
+  "description": "Telethon ub to save your mentions and dms",
   "logo": "https://te.legra.ph/file/ac72a0208034b15f04c18.jpg",
   "keywords": [
     "telegram",
@@ -54,6 +54,11 @@
     },
     "LOG_ID": {
       "description": "Group id to forward messages !",
+      "required": true,
+      "value": ""
+    },
+    "USERNAME": {
+      "description": "Enter your username",
       "required": true,
       "value": ""
     }
