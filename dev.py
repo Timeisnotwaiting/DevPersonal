@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 DEV = TelegramClient(StringSession(STRING), API_ID, API_HASH)
 
-@DEV.on(event.NewMessage(incoming=True))
+@DEV.on(events.NewMessage(incoming=True))
 async def smexy(event):
     if event.is_private:
         if event.message:
