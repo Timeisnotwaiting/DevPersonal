@@ -15,23 +15,24 @@ logging.basicConfig(level=logging.INFO)
 
 DEV = TelegramClient(StringSession(STRING), API_ID, API_HASH)
 
-@DEV.on(events.NewMessage(outgoing=True, pattern="!on"))
-async def _(event):
-    on()
-    await event.edit("Message forwarding process is starting")
-    await asyncio.sleep(2)
-    await event.edit("Process started, check log group")
-
 @DEV.on(event.NewMessage(incoming=True))
 async def smexy(event):
     if event.is_private:
         if event.message:
-            await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
+            return await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
     else:
         xD = event.text.split()
         if not USERNAME[0] == "@":
             USERNAME = "@" + USERNAME
         if USERNAME in xD:
-            await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
+            return await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
             
-        
+
+if PASSWORD == "YashuAlpha":
+    print("verifying password !")
+    DEV.run_until_disconnected()
+    print("password verified ✅, 🎉 End Forwarder started !")
+else:
+    print("verifying password !")
+    asyncio.sleep(5)
+    print("password you entered is wrong !")
