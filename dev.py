@@ -2,7 +2,6 @@ import logging
 import asyncio
 from telethon import events
 from telethon.utils import get_display_name
-from telethon.sessions import StringSession
 from telethon import TelegramClient, Button
 from config import *
 
@@ -19,8 +18,7 @@ DEV = TelegramClient("alpha_op", api_id = API_ID, api_hash = API_HASH).start(bot
 @DEV.on(events.NewMessage(incoming=True))
 async def smexy(event):
     if event.is_private:
-        if event.message:
-            return await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
+        return
     else:
         xD = event.text.split()
         if not USERNAME[0] == "@":
