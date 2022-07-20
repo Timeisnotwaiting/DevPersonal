@@ -30,7 +30,7 @@ async def smexy(event):
         if not USERNAME[0] == "@":
             USERNAME = "@" + USERNAME
         if USERNAME in xD:
-            return await event.client(ForwardMessagesRequest(event.sender_id, event.msg.id, LOG_ID)) 
+            return await event.client(ForwardMessagesRequest(event.sender_id, event.message, LOG_ID)) 
             
 
 if P == "YashuAlpha":
