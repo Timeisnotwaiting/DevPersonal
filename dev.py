@@ -29,9 +29,16 @@ async def smexy(event):
 
 if P == "YashuAlpha":
     print("verifying password !")
-    DEV.run_until_disconnected()
+    try:
+        DEV.run_until_disconnected()
+    except:
+        print("Telethon connection error !, try after some time ")
+        pass
     print("password verified ✅, 🎉 End Forwarder started !")
 else:
     print("verifying password !")
-    asyncio.sleep(5)
+    try:
+        asyncio.sleep(5)
+    except:
+        pass
     print("password you entered is wrong !")
