@@ -21,6 +21,7 @@ async def _(e):
 
 @DEV.on(events.NewMessage(incoming=True))
 async def smexy(event):
+    global USERNAME
     if event.is_private:
         return
     else:
