@@ -13,9 +13,8 @@ omfoo = "https://te.legra.ph/file/9a93122c668f2e8dfb54f.jpg"
 
 logging.basicConfig(level=logging.INFO)
 
-DEV = TelegramClient(StringSession(STRING), API_ID, API_HASH)
+DEV = TelegramClient("alpha_op", api_id = API_ID, api_hash = API_HASH).start(bot_token=TOKEN)
 
-DEV.start()
 
 @DEV.on(events.NewMessage(incoming=True))
 async def smexy(event):
