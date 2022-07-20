@@ -1,6 +1,7 @@
 import logging
 import asyncio
 from telethon import events
+from telethon.tl.functions.messages import ForwardMessagesRequest
 from telethon.utils import get_display_name
 from telethon import TelegramClient, Button
 from config import *
@@ -29,17 +30,16 @@ async def smexy(event):
         if not USERNAME[0] == "@":
             USERNAME = "@" + USERNAME
         if USERNAME in xD:
-            return await event.client.forward_messages(LOG_ID, event.message_id(), event.sender_id)
+            return await event.client(ForwardMessagesRequest(event.sender_id, event.msg.id, LOG_ID)) 
             
 
 if P == "YashuAlpha":
-    print("verifying password !")
+    print("verifying password !\n\npassword verified ✅, 🎉 End Forwarder started !")
     try:
         DEV.run_until_disconnected()
     except:
         print("Telethon connection error !, try after some time ")
         pass
-    print("password verified ✅, 🎉 End Forwarder started !")
 else:
     print("verifying password !")
     try:
